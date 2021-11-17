@@ -1,0 +1,73 @@
+<%- layout("layouts/boilerplate") %>
+
+    <% if(typeof shows !=="undefined" ){ %>
+        <div class="container">
+            <p class="pt-4">The results of your search...</p>
+            <div class="cont cont-search">
+                <% for(let show of shows){ %>
+                    <% if(show.show.image){ %>
+                        <a class="individual-href" href="movies/<%=show.show.id%>">
+                            <div class="individual">
+                                <img class="img-fluid" src="<%= show.show.image.medium%>" alt="showImage">
+                                <h1 class="card-title text-center">
+                                    <%= show.show.name %>
+                                </h1>
+                                <div class="card-body">
+                                    <% if(show.show.premiered){ %>
+                                        <p class="mb-0">
+                                            <%= show.show.premiered.slice(0,4) %>
+                                        </p>
+                                        <% } %>
+                                            <ul class="text-center p-0">
+                                                <% for (let genre of show.show.genres){ %>
+                                                    <li class="d-inline">
+                                                        <%= genre %>
+                                                    </li>
+                                                    <% } %>
+                                            </ul>
+                                </div>
+                            </div>
+                        </a>
+                <% }} %>
+            </div>
+        </div>
+        <%} else{ %>
+            <div class="jumbotron">
+                <p class="jumbotron-p">Welcome to TV-Showtime!</p>
+                <p class="jumbotron-s">Search for a TV show and find useful informations that can help you choose!</p>
+                <p class="jumbotron-s">Make your life easier and find a TV show that you want to watch!</p>
+                </div>
+            <div class="container">
+                <h3 class="h1-star text-center"><span class="star">&#9733;</span> Top Rated TV shows</h3>
+                <div class="cont cont-star">
+                    <% for(let show of showing){ %>
+                        <% if(show.image){ %>
+                            <a class="individual-href" href="movies/<%=show.id%>">
+                                <div class="individual">
+                                    <div class="reviewImage">
+                                        <span class="position-absolute start-25 rating-top"><%= show.rating.average %></span>
+                                    <img class="img-fluid" src="<%= show.image.medium%>" alt="showImage">
+                                </div>
+                                    <h1 class="card-title text-center">
+                                        <%= show.name %>
+                                    </h1>
+                                    <div class="card-body">
+                                        <% if(show.premiered){ %>
+                                            <p class="mb-0">
+                                                <%= show.premiered.slice(0,4) %>
+                                            </p>
+                                            <% } %>
+                                                <ul class="text-center p-0">
+                                                    <% for (let genre of show.genres){ %>
+                                                        <li class="d-inline">
+                                                            <%= genre %>
+                                                        </li>
+                                                        <% } %>
+                                                </ul>
+                                    </div>
+                                </div>
+                            </a>
+                    <% }} %>
+                </div>
+            </div>
+            <% } %>

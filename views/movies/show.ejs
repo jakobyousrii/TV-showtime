@@ -1,0 +1,38 @@
+<%- layout("layouts/boilerplate") %>
+
+<div class="showCont container">
+    <% if(show.image){ %> 
+<img src="<%=show.image.medium%>" alt="" class="img-thumbnail">
+    <% } else{ %> 
+        <img class="img-clasa" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png" alt="showImage">
+        <% } %> 
+<div class="showAbout">
+    <h4><%=show.name %> <% if(show.rating.average){ %>
+        <span class="rating-top"><%= show.rating.average %> </span>
+        <% } %> 
+    </h4>
+    <ul class="showGenres mb-1">
+<% for(let genre of show.genres){%> 
+   <li><%= genre %></li>
+<% } %> 
+</ul>
+<% if(show.premiered){ %> 
+<p class="showGenres">
+    <%= show.premiered.slice(0,4) %>
+</p>
+<% if(show.summary){ %> 
+<p class="show-p">
+    <%= show.summary.replace(/<\/?[^>]+>/gi, '').substr(0) %> 
+</p>
+<% } %> 
+<% if(show.network){ %> 
+<p class="showGenres"><%= `${show.network.name} Channel` %> </p>
+<p class="showGenres">Country - <%=show.network.country.name %> </p>
+<% if(show.language){ %>
+    <p class="showGenres">Language - <%= show.language %></p>
+   <% } %>  
+<% } %> 
+<% } %> 
+</div>
+</div>
+

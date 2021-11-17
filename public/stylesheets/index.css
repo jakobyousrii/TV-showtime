@@ -1,0 +1,317 @@
+html{
+    width: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.2rem;
+    background: linear-gradient(to left,rgb(255, 255, 255),rgb(237, 238, 240))
+}
+
+.nav-link{
+    font-size: 1.1rem;
+}
+.nav-link:hover{
+    border-bottom: 1px solid grey;
+    padding-bottom:0;
+}
+.showCont{
+    width: 100%;
+    display: flex;
+}
+
+.d-inline.btn.btn-outline-primary{
+    border: 1px solid #1ba0d4;
+    background-color: #2bb0e4;
+    font-weight: 700;
+    color: white;
+}
+.d-inline.btn.btn-outline-primary:hover{
+    background-color: #25bcf8;
+    border: 1px solid #25bcf8;
+}
+
+
+
+.cont{
+    margin-top: 3em;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.card-body{
+    padding: 0;
+    max-width: 100%;
+    font-size: 0.6em;
+}
+
+.card-title{
+    font-size: 1rem;
+    padding-top: 1em;
+    font-weight: 600;
+}
+
+.individual{
+    border: 1px solid gainsboro;
+    max-width: 200px;
+    border-radius: 50px;
+    margin-bottom: 2em;
+    background-color: white;
+}
+
+.individual:hover{
+    transform: scale(110%);
+    opacity: 0.8;
+    cursor: pointer;
+
+}
+
+
+.img-fluid{
+    border-radius: 50px 50px 0 0;
+}
+
+.individual-href{
+    color: black;
+}
+
+.individual-href:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.showCont{
+    margin-bottom: 6rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-top: 5rem;
+}
+.showCont img{
+    border-radius: 30px;
+    height: 500px;
+    box-shadow: 3px 3px 3px 3px silver;
+}
+.showAbout{
+    flex-direction: column;
+    padding: 0 3rem;
+    padding-top: 1rem;
+    border: 1px solid gainsboro;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px 5px silver;
+    background-color: white;
+}
+
+.showGenres{
+    list-style-type: none;
+    font-size: 0.7rem;
+    padding-left: 0;
+}
+
+.showGenres li{
+    display: inline;
+}
+
+.star-rating{
+border: 1px solid #F5F3BB;
+background-color: rgb(255, 255, 9);
+border-radius: 50px;
+padding: 0 0.5rem;
+font-size: 0.8rem;
+}
+
+.img-clasa{
+    width: 20%;
+}
+
+.rating-top{
+    border: 1px solid #f02e34;
+background-color: #F1585C;
+border-radius: 50px;
+padding: 0 0.5rem;
+font-size: 0.8rem;
+font-weight: 700;
+color:white;
+}
+
+.jumbotron{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;  
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+     url(https://wallpapercave.com/wp/wp2706302.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 1px 1px black;
+    border-radius: 0;
+}
+
+.jumbotron-p{
+    font-size: 2.3rem;   
+    animation-name: fadein;
+    animation-duration: 1s;
+    font-family: 'Lobster', cursive;
+}
+.jumbotron-s{
+    font-size: 1.2rem;
+    padding: 0 1em;
+    animation-name: fadein;
+    animation-duration: 1s;
+}
+
+.star{
+    color: #F1585C;
+    font-size: 2rem;
+    text-shadow: 2px 2px #f1585c;
+}
+
+.rating-average{
+border: 1px solid #0d8ec2;
+background-color: #0e9ad1;
+border-radius: 50px;
+padding: 0 0.5rem;
+font-size: 0.8rem;
+color: white;
+font-weight: 700;
+}
+
+.footer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.networks{
+    border-bottom: 1px solid rgb(177, 177, 177);
+    text-align: center;
+    padding-bottom: 0.4rem;
+}
+
+.type-h2{
+    font-size: 2rem;
+    color:#1ba0d4;
+    font-weight: 600;
+    font-family: 'Lobster', cursive;
+}
+
+.cont{
+    padding-top: 3rem;
+    border-top: 2px solid #1ba0d4;
+    border-radius: 50px;
+    margin-top:0;
+}
+.cont-star{
+    border-top: 2px solid #F1585C;
+}
+.h1-star{
+    color:rgba(0,0,0,0.7);
+    border-radius: 50%;
+    padding-bottom: 0.5rem;
+    font-family: 'Lobster', cursive;
+}
+
+.navbar-brand{
+     animation-name: rotated;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+.navbar-search{
+    margin-left: auto;
+}
+
+.icons{
+    color: #2bb0e4;
+}
+.cont-search{
+    border-top: none;
+}
+
+@keyframes fadein {
+    from{
+        padding-bottom:100%
+    }
+    to{
+        padding-bottom: 0%;
+    }
+    
+}
+@keyframes rotated{
+  0%{
+      transform: rotate(10deg);
+  }
+  50%{
+      transform: rotate(-10deg)
+  }
+  100%{
+      transform: rotate(10deg);
+  }
+}
+
+
+@media screen and (max-width: 768px){
+    .individual{
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+    .jumbotron{
+        background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+        url(https://freegametips.com/wp-content/uploads/2019/10/1572120665_Several-characters-return-in-the-Breaking-Bad-movie.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .jumbotron-p{
+        font-size: 1.6rem;
+    }
+    .jumbotron-s{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .showCont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        border-radius: 0%;
+        box-shadow: none;
+    }
+    .showAbout{
+        border-radius: 0%;
+    }
+    .img-thumbnail{
+        height: 60% !important;
+    }
+    .main{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+    .navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light{
+        text-align: center;
+    }
+    .navbar-search{
+        margin: 0 auto !important;
+        display: block;
+    }
+    .img-thumbnail{
+        margin: 1rem 0;
+    }
+}
+

@@ -1,0 +1,35 @@
+<%- layout("layouts/boilerplate") %>
+
+    <div class="container">
+        <h1 class="type-h2 text-center my-5"><%= type %> TV shows</h1>
+        <div class="cont">
+            <% for(let show of shows){ %>
+                <% if(show.image){ %>
+                    <a class="individual-href" href="/movies/<%=show.id%>">
+                        <div class="individual">
+                            <div class="reviewImage">
+                                <span class="position-absolute start-25 rating-average"><%= show.rating.average %></span>
+                            <img class="img-fluid" src="<%= show.image.medium%>" alt="showImage">
+                        </div>
+                            <h1 class="card-title text-center">
+                                <%= show.name %>
+                            </h1>
+                            <div class="card-body">
+                                <% if(show.premiered){ %>
+                                    <p class="mb-0">
+                                        <%= show.premiered.slice(0,4) %>
+                                    </p>
+                                    <% } %>
+                                        <ul class="text-center p-0">
+                                            <% for (let genre of show.genres){ %>
+                                                <li class="d-inline">
+                                                    <%= genre %>
+                                                </li>
+                                                <% } %>
+                                        </ul>
+                            </div>
+                        </div>
+                    </a>
+            <% }} %>
+        </div>
+    </div>
