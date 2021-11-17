@@ -28,7 +28,10 @@ app.get("/", catchAsync(async(req,res,next)=>{
         const filt = shows.data.filter((f)=>{
             return f.rating.average > 8.5;
         });
-          res.render("home",{showing:filt});
+        const sorted = filt.sort((a,b)=>{
+            return  b.rating.average - a.rating.average;
+        });
+          res.render("home",{showing:sorted});
     }
 }));
 app.get("/movies",async(req,res)=>{
@@ -45,7 +48,10 @@ app.get("/movies",async(req,res)=>{
                 }
             }
     }
-    res.render("movies/type",{shows:typeOfShow,type});
+    const sorted = typeOfShow.sort((a,b)=>{
+        return  b.rating.average - a.rating.average;
+    });
+    res.render("movies/type",{shows:sorted,type});
     }
 });
 

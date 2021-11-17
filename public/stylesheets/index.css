@@ -15,7 +15,7 @@ body{
 }
 .nav-link:hover{
     border-bottom: 1px solid grey;
-    padding-bottom:0;
+    padding-bottom: 0;
 }
 .showCont{
     width: 100%;
@@ -312,6 +312,15 @@ font-weight: 700;
     }
     .img-thumbnail{
         margin: 1rem 0;
+    }
+    .nav-link{
+        padding:0.5rem 0;
+    }
+    .nav-link:hover{
+        padding:0.5rem 0;
+    }
+    .showAbout{
+        padding:1rem 1.1rem;
     }
 }
 
